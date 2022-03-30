@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Rich text</title>
+</head>
+
+<body>
+    <header class="principal">
+        <div class="container">
+            <div class="group-opt">
+                <select id="tam-text" data-cmd="formatBlock">
+                    <option value="p">Parágrafo</option>
+                    <option value="h3">Título 3</option>
+                    <option value="h2">Título 2</option>
+                    <option value="h1">Título 1</option>
+                </select><!--tam-text-->
+            </div><!--group-opt-->
+
+            <div class="btn-salvar">
+                <button id="btnSalvarHtml">Salvar</button>
+            </div><!--btn-salvar-->
+            <div class="clear"></div>
+        </div><!--container-->
+    </header>
+    <section class="box-rich-text">
+        <header class="box-menu">
+            <nav class="menu">
+                <ul>
+                    <li><button class="btn-edit" data-cmd="bold"><i class="fas fa-bold"></i></button></li>
+                    <li><button class="btn-edit" data-cmd="italic"><i class="fas fa-italic"></i></button></li>
+                    <li><button class="btn-edit" data-cmd="underline"><i class="fas fa-underline"></i></button></li>
+
+                    <li><button class="btn-edit" data-cmd="justifyLeft"><i class="fas fa-align-left"></i></button></li>
+                    <li><button class="btn-edit" data-cmd="justifyCenter"><i class="fas fa-align-center"></i></button></li>
+                    <li><button class="btn-edit" data-cmd="justifyRight"><i class="fas fa-align-right"></i></button></li>
+
+                    <li><button class="btn-edit" data-cmd="insertOrderedList"><i class="fas fa-list-ol"></i></button></li>
+                    <li><button class="btn-edit" data-cmd="insertUnorderedList"><i class="fas fa-list-ul"></i></button></li>
+                    <li><button class="btn-edit" data-cmd="insertImage"><i class="fas fa-image"></i></button></li>
+                    <li><button class="btn-edit" data-cmd="createLink"><i class="fas fa-link"></i></button></li>
+
+                    <li><button class="btn-edit" data-cmd="removeFormat"><i class="fas fa-remove-format"></i></button></li>
+                    <li><button class="btn-edit" data-cmd="showCode"><i class="fas fa-code"></i></button></li>
+                </ul>
+            </nav><!--menu-->
+        </header>
+
+        <div class="box-text">
+            <iframe id="frame-text" name="textField"></iframe>
+        </div><!--box-text-->
+
+        <div class="clear"></div>
+    </section><!--box-rich-text-->
+
+    <section class="modal-get-image">
+        <div class="wraper-image">
+            <h3>Escolha uma imagem</h3>
+            <div class="group-image">
+                <img src="./img/trigo.jpg" alt="adfs">
+                <img src="./img/img-bg.png" alt="adfs">
+            </div><!--group-image-->
+
+            <div class="get-url-image">
+                <input class='setUrl' type="hidden">
+                <button id="btn-getUrlImg">Adicionar imagem</button>
+            </div><!--get-url-image-->
+
+        </div><!--wraper-image-->
+    </section><!--modal-get-image-->
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
